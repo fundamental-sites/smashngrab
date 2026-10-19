@@ -81,12 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const proceedBtn = document.getElementById('proceedBtn');
-  if (proceedBtn) {
-    proceedBtn.addEventListener('click', () => {
-      window.location.href = targetUrl;
-    });
-  }
+	const proceedBtn = document.getElementById('proceedBtn');
+	  if (proceedBtn) {
+		proceedBtn.addEventListener('click', () => {
+		  window.open(targetUrl, '_blank');
+		  if (modal) modal.style.display = 'none'; // Optional: hides the modal after opening the tab
+		});
+	  }
 
   const cancelBtn = document.getElementById('cancelBtn');
   if (cancelBtn) {
