@@ -90,3 +90,101 @@ footer p{font-size:12px;color:var(--muted)}
 .modal-box h3 { font-family: Impact; font-size: 32px; margin-top: 0; color: var(--ink); }
 .modal-box p { color: #625a53; line-height: 1.6; margin: 20px 0; }
 .modal-actions { display: flex; gap: 15px; justify-content: center; margin-top: 25px; }
+
+/* ==========================================
+   RESPONSIVE DESIGN FOR TABLETS & MOBILES
+   ========================================== */
+
+/* Tablets and Medium Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 5%;
+  }
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .actions {
+    justify-content: center;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .story {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 70px 5%;
+  }
+  .story-mark {
+    height: 300px;
+  }
+}
+
+/* Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Header & Navigation */
+  .top {
+    height: auto;
+    flex-direction: column;
+    padding: 15px 5%;
+    gap: 12px;
+    position: relative;
+  }
+  .top nav {
+    gap: 20px;
+    font-size: 11px;
+  }
+  .brand img {
+    width: 160px;
+  }
+
+  /* Hero adjustments */
+  .hero h1 {
+    font-size: clamp(42px, 12vw, 65px);
+  }
+  .hero-art {
+    height: 300px;
+  }
+  .burger-emoji {
+    font-size: 200px;
+  }
+
+  /* Sections padding & layout */
+  .section {
+    padding: 60px 5%;
+  }
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .section h2, .visit h2, .order h2 {
+    font-size: clamp(45px, 12vw, 65px);
+  }
+
+  /* Single column grids for mobile */
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .upgrade-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Visit & Footer sections */
+  .visit {
+    flex-direction: column;
+    padding: 60px 5%;
+    gap: 35px;
+  }
+  .visit>div:last-child {
+    max-width: 100%;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 5%;
+    gap: 15px;
+  }
+}
