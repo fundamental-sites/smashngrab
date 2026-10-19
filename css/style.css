@@ -4,7 +4,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
 a{color:inherit;text-decoration:none}
 
-/* Top Navigation */
+/* Top Navigation - Sticky Persistent Banner */
 .top{height:90px;background:#fffaf1;display:flex;align-items:center;justify-content:space-between;padding:12px max(5%,calc((100vw - 1300px)/2));gap:25px;position:sticky;top:0;z-index:10;border-bottom:1px solid #ddd4c6}
 .brand img{width:205px;display:block}
 .top nav{display:flex;gap:30px;font-size:13px;font-weight:900;letter-spacing:1px}
@@ -53,6 +53,33 @@ a{color:inherit;text-decoration:none}
 .item-top h3{font-size:23px;margin:0;line-height:1.15}
 .item-top strong{white-space:nowrap;color:var(--orange);font-size:13px;text-align:right}
 .menu-card p{color:#625a53;line-height:1.6;font-size:14px;margin:0}
+
+/* Upgrade Section Styling - Compact & Aligned */
+.upgrade-section {
+  margin-top: 60px;
+  background: #f0e6d6;
+  border: 2px solid #dfd1bd;
+  padding: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.upgrade-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.upgrade-card {
+  background: #fffaf3;
+  padding: 18px 22px;
+  border: 1px solid #e5dacb;
+}
+.upgrade-card .item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 
 /* Story & Order CTA */
 .story{background:#e9dfcf;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:100px max(5%,calc((100vw - 1300px)/2))}
@@ -124,13 +151,15 @@ footer p{font-size:12px;color:var(--muted)}
 
 /* Mobile Phones (max-width: 768px) */
 @media (max-width: 768px) {
-  /* Header & Navigation */
+  /* Header & Navigation - Maintained sticky persistent banner on mobile */
   .top {
     height: auto;
     flex-direction: column;
     padding: 15px 5%;
     gap: 12px;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   .top nav {
     gap: 20px;
@@ -187,3 +216,4 @@ footer p{font-size:12px;color:var(--muted)}
     padding: 30px 5%;
     gap: 15px;
   }
+}
