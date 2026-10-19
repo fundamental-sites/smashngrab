@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141210">
+  <meta name="description" content="Smash & Grab Burgers at Westfield Collective, 750 E 181st St, Westfield, IN. Family-owned smash burgers, crispy sides and wings.">
+  <title>Smash & Grab Burgers | Westfield Collective, Westfield IN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="top">
+    <a href="#home" class="brand">
+      <img src="images/logo.png" alt="Smash & Grab Logo" width=\'200\' height=\'50\'></svg>
+    </a>
+    <nav>
+      <a href="#menu">MENU</a>
+      <a href="#story">STORY</a>
+      <a href="#visit">VISIT</a>
+    </nav>
+    <button class="button small order-trigger">ORDER ONLINE</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div>
+      <span class="eyebrow">WESTFIELD COLLECTIVE, IN</span>
+      <h1>CRISPY EDGES. <em>BOLD FLAVOR.</em></h1>
+      <p>Family-owned smash burgers cooked hot and fast, served alongside golden fries, crispy wings, and thick hand-spun shakes.</p>
+      <div class="actions">
+        <a href="#menu" class="button">EXPLORE THE MENU</a>
+        <a href="#visit" class="textlink">VISIT US &rarr;</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="roundel">
+        <span>100%</span>
+        <small>FRESH BEEF</small>
+      </div>
+      <div class="burger-emoji">&#127828;</div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <span>★ FAMILY OWNED & OPERATED</span>
+    <span>★ SERVING WESTFIELD COLLECTIVE</span>
+    <span>★ FRESH SMASHED DAILY</span>
+  </div>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section">
+    <div class="section-heading">
+      <div>
+        <span class="category">OUR OFFERINGS</span>
+        <h2>THE <span class="orange">MENU</span></h2>
+      </div>
+      <p>Hand-crafted smash burgers and sides made fresh to order. Filter by category below to explore our lineup.</p>
+    </div>
+
+    <div class="filters">
+      <button class="active" onclick="filterMenu('all', this)">ALL ITEMS</button>
+      <button onclick="filterMenu('signature smash', this)">BURGERS</button>
+      <button onclick="filterMenu('fries & crispy', this)">SIDES</button>
+      <button onclick="filterMenu('crispy wings', this)">WINGS</button>
+      <button onclick="filterMenu('kids meals', this)">KIDS</button>
+    </div>
+
+    <!-- Main Dynamic Menu Grid -->
+    <div class="menu-grid" id="menu-container">
+      <!-- Injected dynamically via js/main.js -->
+    </div>
+
+    <!-- Upgrade / Customize Section Injected Below Grid -->
+    <div id="upgrade-container"></div>
+  </section>
+
+  <!-- Story Section -->
+  <section id="story" class="story">
+    <div class="story-mark">
+      <span>S&G</span>
+    </div>
+    <div>
+      <span class="category">OUR HERITAGE</span>
+      <h2>BUILT ON <br><em>PASSION.</em></h2>
+      <p>Smash & Grab was born from a simple obsession: achieving the ultimate caramelized crispy crust on a beef patty while keeping the inside juicy and tender. Located inside Westfield Collective, we take pride in serving our community with honest ingredients and fast, friendly hospitality.</p>
+      <strong>EST. 2026 • WESTFIELD, INDIANA</strong>
+    </div>
+  </section>
+
+  <!-- Order Online CTA Section -->
+  <section class="order">
+    <span class="category">READY TO EAT?</span>
+    <h2>ORDER ONLINE FOR <span class="orange">PICKUP</span></h2>
+    <p>Skip the wait and order ahead. Click below to place your order directly through our secure ordering partner.</p>
+    <button class="button order-trigger">START YOUR ORDER NOW</button>
+    <small>Secure checkout powered by Westfield Collective ordering portal.</small>
+  </section>
+
+  <!-- Visit & Inquiry Section -->
+  <section id="visit" class="visit">
+    <div>
+      <span class="category">LOCATION & HOURS</span>
+      <h2>COME <span class="orange">SEE US</span></h2>
+      <p>We are located at 750 E 181st St inside Westfield Collective. Stop by for lunch, dinner, or a late-night bite!</p>
+    </div>
+    <div>
+      <h3>HOURS OF OPERATION</h3>
+      <p><strong>Sunday – Thursday:</strong> 11:00 AM – 9:00 PM<br><strong>Friday – Saturday:</strong> 11:00 AM – 10:00 PM</p>
+      <h3>CONTACT & INQUIRIES</h3>
+      <p><strong>Phone:</strong> (555) 822-6347<br><strong>Email:</strong> info@fundamental-hg.com</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="#home" class="brand">
+      <img src="images/logo.png" alt="Smash & Grab Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'40\'><text x=\'0\' y=\'28\' font-family=\'Impact\' font-size=\'22\' fill=\'%23171513\'>SMASH & GRAB</text></svg>'">
+    </a>
+    <p>&copy; 2026 Smash & Grab Burgers. All rights reserved.</p>
+    <strong>750 E 181st St, Westfield, IN</strong>
+  </footer>
+
+  <!-- External Redirect Popup Modal -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-box">
+      <h3>REDIRECTING TO ORDER</h3>
+      <p>You are now being redirected to our secure online ordering partner at Westfield Collective.</p>
+      <div class="modal-actions">
+        <button class="button small" id="proceedBtn">CONTINUE</button>
+        <button class="button small" style="background:#736b62;border-color:#736b62;" id="cancelBtn">CANCEL</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/menu-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
