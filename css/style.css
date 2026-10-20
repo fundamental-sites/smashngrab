@@ -6,7 +6,13 @@ a{color:inherit;text-decoration:none}
 
 /* Top Navigation - Sticky Persistent Banner */
 .top{height:90px;background:#fffaf1;display:flex;align-items:center;justify-content:space-between;padding:12px max(5%,calc((100vw - 1300px)/2));gap:25px;position:sticky;top:0;z-index:10;border-bottom:1px solid #ddd4c6}
-.brand img{width:205px;display:block}
+.brand img {
+  width: 205px;
+  max-height: 64px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 .top nav{display:flex;gap:30px;font-size:13px;font-weight:900;letter-spacing:1px}
 .top nav a:hover,.textlink:hover{color:var(--orange)}
 
