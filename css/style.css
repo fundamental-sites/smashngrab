@@ -1,5 +1,17 @@
 :root{--ink:#171513;--cream:#f6f1e7;--orange:#e7481c;--muted:#736b62}
 *{box-sizing:border-box}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
 a{color:inherit;text-decoration:none}
@@ -24,9 +36,9 @@ a{color:inherit;text-decoration:none}
 /* Hero Section */
 .hero{min-height:620px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;background:#171513;color:white;padding:70px max(5%,calc((100vw - 1300px)/2));overflow:hidden}
 .eyebrow{font-size:12px;letter-spacing:2.4px;font-weight:900;color:#ff916b}
-.hero h1,.section h2,.story h2,.order h2,.visit h2{font-family:Impact,'Arial Narrow',sans-serif;font-stretch:condensed;font-weight:900;line-height:.98;letter-spacing:.5px}
-.hero h1{font-size:clamp(58px,6.3vw,105px);margin:25px 0}
-.hero h1 em,.story h2 em{color:var(--orange);font-style:normal}
+.hero .hero-title,.hero h1,.section h2,.story h2,.order h2,.visit h2{font-family:Impact,'Arial Narrow',sans-serif;font-stretch:condensed;font-weight:900;line-height:.98;letter-spacing:.5px}
+.hero .hero-title{font-size:clamp(58px,6.3vw,105px);margin:25px 0}
+.hero .hero-title em,.hero h1 em,.story h2 em{color:var(--orange);font-style:normal}
 .hero p{max-width:460px;font-size:19px;line-height:1.65;color:#e1d9d0}
 .actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:34px}
 .textlink{font-size:13px;font-weight:900}
@@ -179,7 +191,7 @@ footer p{font-size:12px;color:var(--muted)}
   }
 
   /* Hero adjustments */
-  .hero h1 {
+  .hero .hero-title, .hero h1 {
     font-size: clamp(42px, 12vw, 65px);
   }
   .hero-art {
