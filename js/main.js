@@ -72,7 +72,7 @@ function filterMenu(category, btnElement) {
 // Modal Popup & Initialization Logic
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('orderModal');
-  const targetUrl = "https://www.meandu.app/westfield-collective-mvo/counter";
+  const targetUrl = "https://order.toasttab.com/online/smash-grab-westfield";
 		// Clear URL hash on page load to prevent unwanted section jumps on F5 reload
   document.querySelectorAll('.order-trigger').forEach(trigger => {
     trigger.addEventListener('click', (e) => {
